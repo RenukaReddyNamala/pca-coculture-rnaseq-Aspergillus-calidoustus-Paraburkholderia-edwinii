@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Step 06: STAR alignment + gene-level quantification using featureCounts
+# Step 08: STAR alignment + gene-level quantification using featureCounts
 # Organism: Aspergillus calidoustus (fungus-only RNA-seq)
 # Counting: reverse-stranded (-s 2), exon-level, gene-level summarization
 # Generated outputs:
