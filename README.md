@@ -1,9 +1,9 @@
 
 # PCA-Dependent Coculture RNA-seq Analysis
 
-**Aspergillus calidoustus – Paraburkholderia edwinii**
+***Aspergillus calidoustus* – *Paraburkholderia edwinii***
 
-This repository contains a reproducible bulk RNA-seq analysis pipeline used to study fungal transcriptional responses to coculture and phenazine carboxylic acid (PCA) stress, with a focus on *Aspergillus calidoustus*.
+This repository contains a reproducible bulk RNA-seq analysis pipeline used to study fungal transcriptional responses to coculture and phenazine carboxylic acid (PCA) stress, with a focus on **Aspergillus calidoustus**.
 
 The workflow includes quality control, trimming, genome annotation, alignment, gene-level quantification, and differential expression analysis using edgeR.
 
@@ -11,9 +11,9 @@ The workflow includes quality control, trimming, genome annotation, alignment, g
 
 ## Experimental Design
 
-Single-end Illumina RNA-seq libraries were generated for *Aspergillus calidoustus* grown under the following conditions:
+Single-end Illumina RNA-seq libraries were generated for **Aspergillus calidoustus** grown under the following conditions:
 
-- Monoculture vs coculture with *Paraburkholderia edwinii*
+- Monoculture vs coculture with **Paraburkholderia edwinii**
 - PCA-treated vs untreated
 - Biological replicates per condition
 
@@ -57,21 +57,16 @@ results/
 Results
 Differential expression analysis across PCA stress and coculture conditions
 
-To characterize transcriptional responses of Aspergillus calidoustus under phenazine (PCA) stress and bacterial coculture, we performed differential expression analysis using edgeR across four biologically relevant contrasts representing both stress and interaction effects:
+To characterize transcriptional responses of *Aspergillus calidoustus* under phenazine (PCA) stress and bacterial coculture, we performed differential expression analysis using edgeR across four biologically relevant contrasts representing both stress and interaction effects:
 
-AspPCA vs AspNoPCA – effect of PCA stress on A. calidoustus in monoculture
-
-CocPCA vs CocNoPCA – effect of PCA stress during coculture
-
-AspPCA vs CocPCA – effect of coculture under PCA stress
-
-AspNoPCA vs CocNoPCA – effect of coculture in the absence of PCA
+- **AspPCA vs AspNoPCA** – effect of PCA stress on *A. calidoustus* in monoculture  
+- **CocPCA vs CocNoPCA** – effect of PCA stress during coculture  
+- **AspPCA vs CocPCA** – effect of coculture under PCA stress  
+- **AspNoPCA vs CocNoPCA** – effect of coculture in the absence of PCA
 
 For each contrast, gene-level differential expression statistics (log₂ fold change, dispersion, and adjusted p-values) were computed and filtered to produce GeneID-only result tables.
 
-📁 Final edgeR result tables are available in:
-results/edgeR_tables/
-
+Final edgeR result tables: [`results/edgeR_tables/`](results/edgeR_tables/)  
 Global transcriptional shifts revealed by volcano plots
 
 Volcano plots were generated for each contrast to visualize the overall magnitude and significance of differential expression. These plots highlight widespread transcriptional remodeling in response to both PCA stress and coculture, with distinct subsets of genes showing strong up- or down-regulation depending on condition.
@@ -82,10 +77,13 @@ PCA stress induces a pronounced transcriptional response in monoculture, which i
 
 Coculture effects differ substantially between PCA and No-PCA conditions, suggesting condition-dependent microbial interactions.
 
-📁 Volcano plots for all four contrasts are available in:
-results/volcano_plots/
-
+ Volcano plots: [`results/volcano_plots/`](results/volcano_plots/)  
 Functional category–specific responses under stress and interaction
+
+#### Example volcano plot (AspPCA vs AspNoPCA)
+
+![AspPCA vs AspNoPCA volcano](results/volcano_plots/AspPCA_vs_AspNoPCA_volcano.png)
+
 
 To interpret biological function, differentially expressed genes were grouped into curated functional categories and visualized using heatmaps. These analyses reveal coordinated regulation of genes involved in stress response, secretion, and metabolism.
 
@@ -101,10 +99,13 @@ CAZymes reflecting changes in carbohydrate metabolism and cell wall dynamics
 
 These functional trends suggest that A. calidoustus mounts both protective and adaptive responses when exposed to phenazine stress, and that these responses are reshaped in the presence of the bacterial partner.
 
-📁 Functional category heatmaps are available in:
-results/heatmaps/
+Functional category heatmaps: [`results/heatmaps/`](results/heatmaps/)
 
-Summary
+#### Example functional category heatmap (Redox)
+
+![Redox heatmap](results/heatmaps/Redox_heatmap.jpg)
+
+### Summary and biological interpretation
 
 Together, these results demonstrate that:
 
